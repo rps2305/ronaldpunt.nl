@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubuntu Development Machine Setup Guide</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 10px;
+        border-radius: 6px;
+        overflow-x: auto;
+      }
+      code {
+        font-family: Consolas, monospace;
+      }
+      .section {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ubuntu Desktop Development Machine Setup Guide</h1>
+
+    <div class="section">
+      <h2>0. Prep: Update & Basic Tools</h2>
+      <pre><code>sudo apt update && sudo apt upgrade -y
+sudo apt install -y build-essential software-properties-common ca-certificates apt-transport-https gnupg lsb-release unzip</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>1. Core Network & Security Tools</h2>
+      <h3>1.1 wget, curl, git, openssl, dns utils, nmap</h3>
+      <pre><code>sudo apt install -y wget curl git openssl dnsutils nmap</code></pre>
+      <h3>1.2 OpenSSH Server</h3>
+      <pre><code>sudo apt install -y openssh-server
+sudo systemctl enable ssh
+sudo systemctl start ssh</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>2. PowerShell + Azure/AAD/Graph Modules</h2>
+      <h3>2.1 Install PowerShell</h3>
+      <pre><code>wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+sudo apt update
+sudo apt install -y powershell</code></pre>
+      <h3>2.2 Install Azure Modules</h3>
+      <pre><code>pwsh
+Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+Install-Module Az -Scope CurrentUser
+Install-Module Microsoft.Graph -Scope CurrentUser
+Install-Module AzureAD -Scope CurrentUser
+exit</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>3. Node.js Stack (nvm, npm, Ionic, Lighthouse, BLC)</h2>
+      <h3>3.1 Install NVM</h3>
+      <pre><code>curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"</code></pre>
+      <h3>3.2 Install Node (LTS)</h3>
+      <pre><code>nvm install --lts
+nvm use --lts</code></pre>
+      <h3>3.3 Global Node Tools</h3>
+      <pre><code>npm install -g @ionic/cli
+npm install -g lighthouse
+npm install -g broken-link-checker</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>4. Python via pyenv</h2>
+      <h3>4.1 Dependencies</h3>
+      <pre><code>sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev</code></pre>
+      <h3>4.2 Install pyenv</h3>
+      <pre><code>curl https://pyenv.run | bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+exec "$SHELL"
+pyenv install 3.12.3
+pyenv global 3.12.3</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>5. Install DDEV</h2>
+      <pre><code>curl -fsSL https://raw.githubusercontent.com/ddev/ddev/master/scripts/install_ddev.sh | bash</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>6. Docker, Compose, Portainer, Watchtower</h2>
+      <h3>6.1 Docker Engine</h3>
+      <pre><code>sudo apt remove -y docker docker-engine docker.io containerd runc || true
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+sudo usermod -aG docker $USER</code></pre>
+      <h3>6.2 Docker Compose</h3>
+      <pre><code>sudo apt install -y docker-compose-plugin</code></pre>
+      <h3>6.3 Portainer</h3>
+      <pre><code>docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest</code></pre>
+      <h3>6.4 Watchtower</h3>
+      <pre><code>docker run -d --name watchtower --restart=always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --include-stopped --revive-stopped --schedule "0 0 4 * * *"</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>7. Desktop Applications</h2>
+      <h3>7.1 Visual Studio Code</h3>
+      <pre><code>wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/packages.microsoft.gpg > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+sudo apt update
+sudo apt install -y code</code></pre>
+      <h3>7.2 Postman</h3>
+      <pre><code>sudo snap install postman</code></pre>
+      <h3>7.3 Browsers</h3>
+      <pre><code>sudo apt install -y chromium-browser || sudo snap install chromium
+wget https://go.microsoft.com/fwlink?linkid=2149051 -O microsoft-edge.deb
+sudo dpkg -i microsoft-edge.deb || sudo apt -f install -y
+rm microsoft-edge.deb</code></pre>
+      <h3>7.4 Android Studio</h3>
+      <pre><code>sudo snap install android-studio --classic</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>8. Ollama + Models</h2>
+      <pre><code>curl -fsSL https://ollama.com/install.sh | sh
+sudo systemctl enable ollama
+sudo systemctl start ollama
+ollama pull llama3
+ollama pull codellama
+ollama pull phi3</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>9. Gemini CLI</h2>
+      <pre><code>npm install -g @google/generative-ai-cli
+export GOOGLE_API_KEY="YOUR_GEMINI_API_KEY"
+echo 'export GOOGLE_API_KEY="YOUR_GEMINI_API_KEY"' >> ~/.bashrc</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>10. Optional Tools</h2>
+      <pre><code>sudo apt install -y fonts-firacode jq htop</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>11. Reboot</h2>
+      <p>After completing all installation steps:</p>
+      <pre><code>sudo reboot</code></pre>
+    </div>
+  </body>
+</html>

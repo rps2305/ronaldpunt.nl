@@ -1,0 +1,15 @@
+{
+  "name": "Erik Leuning – Begeleiding en Ondersteuning",
+  "short_name": "Erik Leuning",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d7ea3",
+  "theme_color": "#0d7ea3",
+  "icons": [
+    {
+      "src": "images/logo256x256-256.webp",
+      "sizes": "256x256",
+      "type": "image/webp"
+    }
+  ]
+}

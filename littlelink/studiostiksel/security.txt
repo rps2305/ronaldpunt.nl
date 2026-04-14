@@ -1,0 +1,6 @@
+# security.txt for Studio Stiksel
+Contact: mailto:security@studiostiksel.nl
+Contact: https://studiostiksel.nl/contact.html
+Encryption: https://studiostiksel.nl/pgp-key.txt
+Preferred-Languages: en, nl
+Expires: 2026-12-31T23:59:59+00:00

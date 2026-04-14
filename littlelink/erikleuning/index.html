@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="nl" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Erik Leuning – Begeleiding en Ondersteuning – Oldenzaal</title>
+    <meta name="description" content="Plan een kennismaking met Erik Leuning voor persoonlijke begeleiding in Oldenzaal en Twente. Praktische ondersteuning richting zelfstandigheid met vertrouwde zorg." />
+    <link rel="canonical" href="https://www.erikleuning.nl/" />
+    <meta itemprop="name" content="Erik Leuning – Begeleiding en Ondersteuning – Oldenzaal" />
+    <meta itemprop="description" content="Plan een kennismaking met Erik Leuning voor persoonlijke begeleiding in Oldenzaal en Twente. Praktische ondersteuning richting zelfstandigheid met vertrouwde zorg." />
+    <meta itemprop="image" content="https://www.erikleuning.nl/images/header-erik-leuning-1024.webp" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Erik Leuning – Begeleiding en Ondersteuning" />
+    <meta property="og:title" content="Erik Leuning – Begeleiding en Ondersteuning – Oldenzaal" />
+    <meta property="og:description" content="Plan een kennismaking met Erik Leuning voor persoonlijke begeleiding in Oldenzaal en Twente. Praktische ondersteuning richting zelfstandigheid met vertrouwde zorg." />
+    <meta property="og:url" content="https://www.erikleuning.nl/" />
+    <meta property="og:image" content="https://www.erikleuning.nl/images/header-erik-leuning-1024.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Erik Leuning – Begeleiding en Ondersteuning – Oldenzaal" />
+    <meta name="twitter:description" content="Plan een kennismaking met Erik Leuning voor persoonlijke begeleiding in Oldenzaal en Twente. Praktische ondersteuning richting zelfstandigheid met vertrouwde zorg." />
+    <meta name="twitter:image" content="https://www.erikleuning.nl/images/header-erik-leuning-1024.webp" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://a.tile.openstreetmap.org" crossorigin />
+    <link rel="preconnect" href="https://b.tile.openstreetmap.org" crossorigin />
+    <link rel="preconnect" href="https://c.tile.openstreetmap.org" crossorigin />
+    <script>
+      (() => {
+        const key = 'erikleuning-theme';
+        const stored = window.localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/main-B4fndoTe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-CHu3g1MH.css">
+  </head>
+  <body class="min-h-full bg-slate-50 text-slate-800 transition-colors dark:bg-slate-900 dark:text-slate-100">
+    <header x-data="siteHeader('home')" class="site-header">
+  <a href="#inhoud" class="skip-link">Overslaan en naar de inhoud gaan</a>
+  <div class="site-header__container">
+    <a href="./" class="site-brand focus-ring">
+      <picture style="width: 4.25rem; height: 4.25rem; overflow: hidden; border-radius: 999px; border: 1px solid rgba(148, 163, 184, 0.35); display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.9);">
+        <img
+          src="images/logo256x256-256.webp"
+          width="128"
+          height="128"
+          loading="lazy"
+          decoding="async"
+          alt="Home"
+          style="width: 100%; height: 100%; object-fit: contain;" />
+      </picture>
+      <span style="display: flex; flex-direction: column; gap: 0.15rem;">
+        <span class="site-brand__title">Erik Leuning</span>
+        <span class="site-brand__subtitle">Begeleiding en Ondersteuning</span>
+      </span>
+    </a>
+    <nav class="primary-nav" aria-label="Hoofdmenu desktop">
+      <template x-for="item in $store.navigatie.items" :key="item.href">
+        <a
+          :href="item.href"
+          class="primary-nav__link focus-ring"
+          :aria-current="currentFor(item) ? 'page' : undefined"
+          x-text="item.label"
+          @click="navigate($event, item)"></a>
+      </template>
+      <button
+        type="button"
+        class="primary-nav__link focus-ring desktop-theme-toggle"
+        @click="toggleTheme"
+        :aria-pressed="isDark"
+        aria-label="Thema wisselen">
+        <template x-if="!isDark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95 5.636 18.364M18.364 18.364 16.95 16.95M7.05 7.05 5.636 5.636M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </template>
+        <template x-if="isDark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z"/></svg>
+        </template>
+      </button>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <button type="button" class="mobile-toggle focus-ring" @click="toggleTheme" :aria-pressed="isDark" aria-label="Thema wisselen">
+        <template x-if="!isDark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95 5.636 18.364M18.364 18.364 16.95 16.95M7.05 7.05 5.636 5.636M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </template>
+        <template x-if="isDark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z"/></svg>
+        </template>
+      </button>
+      <button type="button" class="mobile-toggle focus-ring" @click="toggleMenu" :aria-expanded="mobileOpen" aria-controls="hoofdmenu" aria-label="Hoofdmenu wisselen">
+        <template x-if="!mobileOpen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </template>
+        <template x-if="mobileOpen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6l-12 12"/></svg>
+        </template>
+      </button>
+    </div>
+  </div>
+  <div x-show="mobileOpen" x-transition.opacity.duration.200ms class="mobile-panel" id="hoofdmenu" role="dialog" @keydown.window.escape.prevent="closeMenu" @click.away="closeMenu" x-ref="mobilePanel" aria-label="Hoofdmenu mobiel">
+    <template x-for="item in $store.navigatie.items" :key="item.href">
+      <a
+        :href="item.href"
+        class="focus-ring"
+        :aria-current="currentFor(item) ? 'page' : undefined"
+        x-text="item.label"
+        @click="navigate($event, item)"></a>
+    </template>
+  </div>
+</header>
+
+    <main id="inhoud" class="page-wrapper">
+      <section id="home" data-section="home" class="hero">
+        <div class="hero__text">
+          <span class="badge">Erik Leuning - Begeleiding en Ondersteuning</span>
+          <h1>Welkom bij Erik Leuning</h1>
+          <p class="hero__lede">
+            VAN KWETSBAARHEID NAAR ZELFREDZAAMHEID/ZELFSTANDIGHEID!<br />
+            Staat voor individuele begeleiding van een specifieke hulpvraag; over het algemeen in de eigen omgeving. Begeleiding vanuit PGB en ZIN en particulier; ook in te huren door instellingen.
+          </p>
+          <div class="hero__cta">
+            <a class="partner-link focus-ring" href="https://zorgondernemers-twente.nl" target="_blank" rel="noopener noreferrer">
+              <picture>
+                <img
+                  src="images/zorgondernemers-twente_logo-425.webp"
+                  width="142"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                  alt="logo Coöperatie Zorgondernemers Twente" />
+              </picture>
+              <span>Aangesloten bij Coöperatie Zorgondernemers Twente</span>
+            </a>
+          </div>
+          <div class="alert" role="status">
+            <svg class="mt-0.5 h-5 w-5 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 4h.01M21 12A9 9 0 113 12a9 9 0 0118 0z"/></svg>
+            <p>Kerngedachte: Samenwerken aan het verbeteren van de basisvaardigheden voor de dagelijkse bezigheden.</p>
+          </div>
+        </div>
+        <div class="hero-card">
+          <picture>
+            <img
+              src="images/header-erik-leuning-768.webp"
+              srcset="images/header-erik-leuning-480.webp 480w, images/header-erik-leuning-768.webp 768w, images/header-erik-leuning-1024.webp 1024w"
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 520px"
+              width="1000"
+              height="600"
+              loading="lazy"
+              decoding="async"
+              alt="Vrouw rent door het gebergte" />
+          </picture>
+          <span class="hero-card__badge">Individuele begeleiding</span>
+        </div>
+      </section>
+
+      <section class="page-section" aria-labelledby="begeleiding-in-beeld">
+        <h2 id="begeleiding-in-beeld">Begeleiding in beeld</h2>
+        <div class="stat-cards">
+          <article class="card" style="display: grid; gap: 1rem;">
+            <h3>Biedt hulp bij</h3>
+            <ul style="display: grid; gap: 0.55rem;">
+              <li>Aanleren praktische (zelfstandigheids)vaardigheden</li>
+              <li>Leren bewuste keuzes te maken</li>
+              <li>Inzicht krijgen in oorzaak en gevolg</li>
+              <li>Vergroten zelfvertrouwen</li>
+            </ul>
+          </article>
+          <article class="card" style="display: grid; gap: 1rem;">
+            <h3>Meer dan twintig jaar ervaring</h3>
+            <p>MBO-geschoold en het vak in de praktijk geleerd tijdens begeleiding van vele jongeren/(jong)volwassenen in de loop der jaren (20+). Theoretische kennis vergroot door diverse trainingen en cursussen, waaronder BHV, middelengebruik, ABC-training en psychologie.</p>
+            <p>Geen verzorging/verpleging.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="over-mij" data-section="over-mij" class="page-section">
+        <div class="about-highlight card">
+          <h2>Over mij</h2>
+          <figure class="about-figure">
+            <picture>
+              <img
+                src="images/erik-768.webp"
+                srcset="images/erik-480.webp 480w, images/erik-768.webp 768w, images/erik-1024.webp 1024w"
+                sizes="(max-width: 960px) 100vw, (max-width: 1400px) 70vw, 960px"
+                width="1600"
+                height="450"
+                loading="lazy"
+                decoding="async"
+                alt="Erik Leuning portret" />
+            </picture>
+          </figure>
+          <div class="about-highlight__meta">
+            <span><strong>1964</strong> · Geboren in Hengelo</span>
+            <span><strong>2002</strong> · Verhuisd naar Oldenzaal</span>
+            <span><strong>1997 - 2014</strong> · Jeugdhulpverlening</span>
+            <span><strong>2015</strong> · Eigen praktijk gestart</span>
+          </div>
+          <p>Mijn naam is Erik Leuning en ik ben in 1964 geboren in Hengelo. In 2002 ben ik verhuisd naar Oldenzaal en daar woon ik nog steeds met veel plezier.</p>
+          <p>Na 17,5 jaar (1997-2014) gewerkt te hebben binnen een grote instelling in de Jeugdhulpverlening heb ik in december 2014 afscheid genomen van deze instelling. De visie van de instelling sloot niet meer aan bij die van mij en ik kreeg het gevoel dat ik mijn werk niet meer kon uitvoeren zoals ik dat graag zou willen. Bezuinigen en reorganiseren werden toverwoorden; de individuele jongere kwam nadrukkelijk op het tweede plan.</p>
+          <p>Mijn uitgangspunt is dat de cliënt de basis moet zijn van je werkzaamheden en van daaruit moet er een een op maat gemaakt product aangeboden worden om successen te behalen. Ik ben dan ook van mening dat ik, als individuele werker, beter maatwerk kan leveren. Daarom heb ik besloten om een eigen praktijk te beginnen (2015) voor de individuele begeleiding en ondersteuning van mensen die moeite hebben met (bepaalde aspecten van) het dagelijkse leven.</p>
+          <p>In de laatste jaren als pedagogisch medewerker binnen bovengenoemde instelling, heb ik veel specifieke ervaring opgedaan in individuele, gefaseerde zelfstandigheidstraining en ben ervan overtuigd dat ik dit in de persoonlijke begeleiding goed kan vertalen naar een passend plan van aanpak om, in kleine stappen, tot gewenste groei te komen.</p>
+          <p>Inmiddels heb ik een systematiek ontwikkeld, inclusief uitgebreid werkmateriaal, die ik voor meerdere doelgroepen in kan zetten. In 2015 heb ik mij aangesloten bij de coöperatie Zorgondernemers Twente.</p>
+        </div>
+        <div class="about-pillars">
+          <article>
+            <h3>Mijn kwaliteiten</h3>
+            <ul>
+              <li>Goede communicatieve vaardigheden</li>
+              <li>Observeren / analyseren</li>
+              <li>Brede kennis van gedragsproblematiek</li>
+              <li>Inlevingsvermogen</li>
+              <li>Relativerend vermogen</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Mijn eigenschappen</h3>
+            <ul>
+              <li>Geduldig</li>
+              <li>Betrokken</li>
+              <li>Flexibel</li>
+              <li>Stressbestendig</li>
+              <li>Betrouwbaar</li>
+            </ul>
+          </article>
+          <article class="signature-card">
+            <h3>Richting &amp; samenwerking</h3>
+            <p>Samen met jou werk ik doelgericht aan zelfstandigheid in het dagelijkse leven. Met maatwerk, aandacht en bewezen methodieken bouwen we stap voor stap aan duurzaam zelfvertrouwen.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="doelgroep" data-section="doelgroep" class="page-section">
+        <div class="card" style="display: grid; gap: 1.2rem;">
+          <h2>Doelgroep</h2>
+          <p>Ik richt mij hoofdzakelijk op kwetsbare jongeren en (jong-)volwassenen (18-35), die geholpen willen/moeten worden om zich staande te kunnen houden in de maatschappij. Bovengenoemde leeftijdscategorie is uiteraard niet bindend; in een persoonlijk gesprek kan altijd besproken worden of er mogelijkheden voor specifieke begeleiding zijn.</p>
+          <p>Inzicht geven in de ervaren problematiek en het omzetten van probleemervaringen in de dagelijkse activiteiten naar het aanleren van doelgerichte vaardigheden, staan in mijn begeleiding centraal. Begeleiding/ondersteuning in het zelfstandig functioneren in de breedst mogelijke zin van het woord.</p>
+          <p>Dit kan variëren van het leren op tijd op te staan tot het bereiden van een verantwoorde maaltijd, inclusief de benodigde inkopen en het verantwoorden in een kasboek. Van het maken en nakomen van afspraken, tot omgaan met emoties. Kortom, ik kan helpen met allerlei praktische vaardigheden, het aanleren van het maken van juiste keuzes en het verschaffen van (alternatieve) inzichten. Alles staat in het teken van vergroten van het zelfvertrouwen om nieuwe uitdagingen in het dagelijkse leven aan te kunnen gaan.</p>
+          <p>Ook bied ik mijn diensten aan, aan instellingen/organisaties binnen de (jong)volwassenen zorg.</p>
+          <p><strong>Contra-indicatie:</strong> Plegers van geweldsdelicten en/of zedenmisdrijven.</p>
+        </div>
+      </section>
+
+      <section id="werkwijze" data-section="werkwijze" class="page-section">
+        <div class="responsive-two-column">
+          <div class="card" style="display: grid; gap: 1rem;">
+            <h2>Werkwijze</h2>
+            <p>In een gratis en vrijblijvend kennismakingsgesprek gaan we proberen de hulpvraag duidelijk in kaart te brengen en af te stemmen of er mogelijkheden zijn om een hulpverleningsrelatie aan te gaan, gebaseerd op wederzijds respect en vertrouwen.</p>
+            <p>Erg belangrijk hierin is dat jij, als hulpvrager, duidelijk kenbaar maakt wat de verwachtingen zijn ten aanzien van de begeleiding.</p>
+            <p>Mijn aanpak is erop gericht om in kleine stappen tot (snelle) succeservaringen te komen. Uitgangspunt is het zelfvertrouwen te vergroten, waardoor de uitdagingen in het dagelijks leven makkelijker aangegaan kunnen worden. Ik werk met goed werkende methodieken, waarop de hulpvrager tijdens het traject zijn/haar invloed kan uitoefenen. Het betreft dus geen pasklare, vaststaande aanpak; afstemming op de wensen van de individuele hulpvrager (maatwerk) moet zoveel mogelijk uitgangspunt zijn.</p>
+            <p>Het aanleren en/of uitbreiden van (nieuwe) vaardigheden vormt de basis voor mijn werkwijze. Daarnaast besteed ik veel aandacht aan de manier van denken en doen en de eigen invloed daarop (oorzaak/gevolg). De gedachte hierachter is het verkrijgen van inzicht in het eigen handelen, dan wel de eigen beperking en dit te koppelen aan de probleemervaringen in het dagelijkse leven.</p>
+            <p>Pas als je goed inzicht hebt op je eigen beperking(en) en (on)mogelijkheden, kun je gaan werken aan goede oplossingen.</p>
+          </div>
+          <div class="card" style="display: grid; gap: 1rem;">
+            <p>In de specifieke (woon)begeleiding richt ik mijn aandacht in eerste instantie op het verkrijgen van inzicht en overzicht van het functioneren in het algemeen. Ook hierin staat het aanleren van vaardigheden centraal. De vraag "Hoe kan ik voldoen aan de basiseisen die de maatschappij aan mij stelt, zonder dat ik daar stress bij ervaar omdat ik niet precies weet wat ik moet doen" zal hierin leidend zijn.</p>
+            <p>De begeleiding zal afgestemd zijn op de volgende leefgebieden:</p>
+            <ul style="display: grid; gap: 0.5rem;">
+              <li>Zingeving</li>
+              <li>Wonen</li>
+              <li>Financiën</li>
+              <li>Sociale relaties</li>
+              <li>Lichamelijke en psychische gezondheid</li>
+              <li>Werk en activiteiten</li>
+            </ul>
+            <p>Begeleiding kan betaald worden uit persoonsgebonden budget (PGB), Zorg in natura (ZIN) of particulier via eigen middelen. Voor PGB en ZIN heb je wel een indicatie nodig. Voor specifieke vragen of nadere informatie hierover kun je ook contact met mij opnemen.</p>
+          </div>
+        </div>
+        <div class="image-gallery" style="margin-top: 2rem;">
+          <h3>Samenwerken in beeld</h3>
+          <div class="image-grid">
+            <figure>
+              <picture>
+                <img
+                  src="images/loneliness-2308923_1920-768.webp"
+                  srcset="images/loneliness-2308923_1920-480.webp 480w, images/loneliness-2308923_1920-768.webp 768w, images/loneliness-2308923_1920-1024.webp 1024w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
+                  width="1000"
+                  height="667"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Vrouw aan het strand" />
+              </picture>
+              <figcaption>Inzicht geven in de ervaren problematiek en het omzetten naar doelgerichte vaardigheden.</figcaption>
+            </figure>
+            <figure>
+              <picture>
+                <img
+                  src="images/asphalt-1835525_1920-768.webp"
+                  srcset="images/asphalt-1835525_1920-480.webp 480w, images/asphalt-1835525_1920-768.webp 768w, images/asphalt-1835525_1920-1024.webp 1024w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
+                  width="1000"
+                  height="667"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Op weg" />
+              </picture>
+              <figcaption>Mijn aanpak is erop gericht om in kleine stappen tot (snelle) succeservaringen te komen.</figcaption>
+            </figure>
+            <figure>
+              <picture>
+                <img
+                  src="images/tourist-2436884_1920-768.webp"
+                  srcset="images/tourist-2436884_1920-480.webp 480w, images/tourist-2436884_1920-768.webp 768w, images/tourist-2436884_1920-1024.webp 1024w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
+                  width="1000"
+                  height="667"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Vrouw kijkt opzij" />
+              </picture>
+              <figcaption>Zelfredzaamheid/zelfstandigheid is tegenwoordig erg belangrijk in een steeds harder wordende maatschappij.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="visie" data-section="visie" class="page-section">
+        <div class="card" style="display: grid; gap: 1rem;">
+          <h2>Visie</h2>
+          <p>Ieder mens is uniek en moet ook als zodanig benaderd worden.</p>
+          <p>Zelfredzaamheid/zelfstandigheid is tegenwoordig erg belangrijk in een steeds harder en egoïstischer wordende maatschappij. Simpel gezegd is het gewoon een kwestie van de onmogelijkheden/tekortkomingen te compenseren met mogelijkheden/vaardigheden, waardoor het zelfvertrouwen dusdanig groeit dat de uitdagingen in het dagelijkse leven aangegaan kunnen worden.</p>
+          <p>Ik wil dan ook streven naar zorg op maat, met een gezamenlijk gedragen einddoel voor ogen. Het plafond hoeft niet bereikt te worden, maar een ondergrens moet garant staan voor het goed kunnen functioneren/participeren in de maatschappij.</p>
+        </div>
+      </section>
+
+      <section id="werkgebied" data-section="werkgebied" class="page-section">
+        <div class="card" style="display: grid; gap: 1.2rem;">
+          <h2>Werkgebied</h2>
+          <p>Ik wil mijn werkzaamheden uit gaan voeren binnen een straal van ongeveer 50 km, vanaf Oldenzaal.</p>
+          <p>Staat voor individuele begeleiding van een specifieke hulpvraag; over het algemeen in de eigen omgeving. Begeleiding vanuit PGB en ZIN en particulier; ook in te huren door instellingen.</p>
+          <p>Werkgebied in Twente: Almelo, Borne, Dinkelland, Enschede, Haaksbergen, Hellendoorn, Hengelo, Hof van Twente, Losser, Oldenzaal, Rijssen-Holten, Tubbergen, Twenterand en Wierden.</p>
+          <a href="https://zorgondernemers-twente.nl" target="_blank" rel="noopener noreferrer" class="partner-link focus-ring" style="justify-self: start;">
+            <picture>
+              <img
+                src="images/zorgondernemers-twente_logo-425.webp"
+                width="142"
+                height="48"
+                loading="lazy"
+                decoding="async"
+                alt="logo Coöperatie Zorgondernemers Twente" />
+            </picture>
+            <span>Coöperatie Zorgondernemers Twente</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" data-section="contact" class="page-section" aria-labelledby="contact-title">
+        <div class="card" style="display: grid; gap: 1.2rem;">
+          <h2 id="contact-title">Contact</h2>
+          <p>Als u de indruk heeft dat uw persoonsgegevens niet goed beveiligd zijn of er aanwijzingen zijn van misbruik, neem dan contact met mij op via <a class="focus-ring email-link" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</a>.</p>
+          <p>U kunt een verzoek tot inzage, correctie of verwijdering sturen naar hetzelfde e-mailadres of telefonisch contact opnemen via <a href="tel:+31630516464" class="focus-ring">06-30516464</a>.</p>
+          <p>VAN KWETSBAARHEID NAAR ZELFREDZAAMHEID/ZELFSTANDIGHEID!</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <picture>
+        <img
+          src="images/logo256x256-256.webp"
+          width="120"
+          height="120"
+          loading="lazy"
+          decoding="async"
+          alt="Erik Leuning logo" />
+      </picture>
+      <div>
+        <p class="site-footer__eyebrow">Erik Leuning</p>
+        <p class="site-footer__lead">VAN KWETSBAARHEID NAAR ZELFREDZAAMHEID/ZELFSTANDIGHEID!</p>
+        <p>Staat voor individuele begeleiding van een specifieke hulpvraag; over het algemeen in de eigen omgeving. Begeleiding vanuit PGB en ZIN en particulier; ook in te huren door instellingen.</p>
+      </div>
+    </div>
+    <div class="site-footer__grid">
+      <div>
+        <h3>Snelle navigatie</h3>
+        <nav aria-label="Footer" class="site-footer__nav">
+          <a href="#home">Home</a>
+          <a href="#over-mij">Over mij</a>
+          <a href="#doelgroep">Doelgroep</a>
+          <a href="#werkwijze">Werkwijze</a>
+          <a href="#visie">Visie</a>
+          <a href="#werkgebied">Werkgebied</a>
+          <a href="#contact">Contact</a>
+          <a href="privacyverklaring.html">Privacy &amp; disclaimer</a>
+        </nav>
+      </div>
+      <div>
+        <h3>Bereikbaarheid</h3>
+        <ul class="site-footer__list">
+          <li><a class="focus-ring email-link" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</a></li>
+          <li><a href="tel:+31630516464" class="focus-ring">06-30516464</a></li>
+          <li><a href="https://www.linkedin.com/in/erik-leuning-376558aa/?originalSubdomain=nl" class="focus-ring">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Werkgebied</h3>
+        <p>Begeleiding binnen een straal van circa 50 km rondom Oldenzaal en de 14 Twentse gemeenten.</p>
+        <a href="https://zorgondernemers-twente.nl" target="_blank" rel="noopener" class="partner-link focus-ring" style="margin-top: 1rem;">
+          <picture>
+            <img
+              src="images/zorgondernemers-twente_logo-425.webp"
+              width="142"
+              height="48"
+              loading="lazy"
+              decoding="async"
+              alt="logo Coöperatie Zorgondernemers Twente" />
+          </picture>
+          <span>Coöperatie Zorgondernemers Twente</span>
+        </a>
+      </div>
+    </div>
+    <section class="site-footer__accessibility" aria-labelledby="footer-accessibility">
+      <h3 id="footer-accessibility">Toegankelijkheid</h3>
+      <p>Ik volg de WCAG&nbsp;2.1 AA-richtlijnen om deze site voor iedereen bruikbaar te maken. Signaleert u toch een toegankelijkheidsprobleem? Mail <a class="focus-ring email-link" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</a> of bel <a href="tel:+31630516464" class="focus-ring">06-30516464</a>.</p>
+    </section>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© 2025 Erik Leuning – Begeleiding en Ondersteuning</p>
+    <div>
+      <a class="focus-ring email-link" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</a>
+      <span aria-hidden="true">·</span>
+      <a href="privacyverklaring.html" class="focus-ring">Privacy &amp; disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+<div x-data="cookieBanner()" x-cloak x-show="open" x-transition.opacity.duration.200ms class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie melding" aria-describedby="cookie-banner-description">
+  <div class="cookie-banner__inner">
+    <p id="cookie-banner-description">Deze site gebruikt uitsluitend functionele cookies om de werking van de website te ondersteunen. Er worden geen persoonsgegevens gedeeld met derden.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn" @click="accept">Accepteren</button>
+      <button type="button" class="cookie-decline focus-ring" @click="decline">Weigeren</button>
+    </div>
+  </div>
+</div>
+
+    <script type="application/ld+json">
+      {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Erik Leuning – Begeleiding en Ondersteuning",
+  "url": "https://www.erikleuning.nl/",
+  "image": "https://www.erikleuning.nl/images/header-erik-leuning-1024.webp",
+  "logo": "https://www.erikleuning.nl/images/logo256x256-256.webp",
+  "email": "erik@erikleuning.nl",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Oldenzaal",
+    "addressRegion": "Overijssel",
+    "addressCountry": "NL"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "addressLocality": "Oldenzaal",
+      "addressRegion": "Overijssel",
+      "addressCountry": "NL"
+    },
+    "geoRadius": 50000
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/erik-leuning-376558aa/?originalSubdomain=nl"
+  ]
+}
+
+    </script>
+    <script type="application/ld+json">
+      {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://www.erikleuning.nl/"
+  }
+]
+}
+
+    </script>
+  </body>
+</html>

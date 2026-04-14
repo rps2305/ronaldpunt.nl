@@ -1,0 +1,125 @@
+tap "drud/ddev"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "hudochenkov/sshpass"
+tap "mas-cli/tap"
+tap "sidneys/homebrew"
+brew "ansible"
+brew "aria2"
+brew "cabextract"
+brew "cdrtools"
+brew "curl"
+brew "freetype"
+brew "composer"
+brew "git"
+brew "glib"
+brew "lorem"
+brew "lynis"
+brew "mas"
+brew "mkcert"
+brew "nss"
+brew "rclone"
+brew "wget"
+brew "wimlib"
+brew "drud/ddev/ddev"
+brew "hudochenkov/sshpass/sshpass"
+cask "alfred"
+cask "arc"
+cask "balenaetcher"
+cask "bartender"
+cask "downie"
+cask "eqmac"
+cask "google-chrome"
+cask "graphicconverter"
+cask "handbrake"
+cask "hazel"
+cask "icons"
+cask "imageoptim"
+cask "istat-menus"
+cask "microsoft-auto-update"
+cask "microsoft-edge"
+cask "nova"
+cask "omnigraffle"
+cask "omnioutliner"
+cask "parallels"
+cask "postman"
+cask "powershell"
+cask "raspberry-pi-imager"
+cask "retrobatch"
+cask "sdformatter"
+cask "skype"
+cask "spotify"
+cask "teamviewer"
+cask "tor-browser"
+cask "transmission"
+cask "tuxera-ntfs"
+cask "visual-studio-code"
+cask "vlc"
+cask "vnc-viewer"
+cask "waterfox"
+mas "1Password for Safari", id: 1569813296
+mas "DevCleaner", id: 1388020431
+mas "Free Ruler", id: 1483172210
+mas "GarageBand", id: 682658836
+mas "HP Smart", id: 1474276998
+mas "iMovie", id: 408981434
+mas "Infuse", id: 1136220934
+mas "Keynote", id: 409183694
+mas "LittleIpsum", id: 405772121
+mas "LittlePicker", id: 422355733
+mas "Mactracker", id: 430255202
+mas "Magnet", id: 441258766
+mas "Messenger", id: 1480068668
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Microsoft To Do", id: 1274495053
+mas "MindNode", id: 1289197285
+mas "Numbers", id: 409203825
+mas "OmniFocus", id: 1346203938
+mas "Pages", id: 409201541
+mas "Pixelmator Pro", id: 1289583905
+mas "Smart Converter Pro 3", id: 1478356887
+mas "Tailscale", id: 1475387142
+mas "Webp Converter", id: 1527716894
+mas "WhatsApp", id: 1147396723
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
+vscode "antfu.iconify"
+vscode "austenc.tailwind-docs"
+vscode "bradlc.vscode-tailwindcss"
+vscode "dbaeumer.vscode-eslint"
+vscode "ecmel.vscode-html-css"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.docker-explorer"
+vscode "GitHub.remotehub"
+vscode "github.vscode-github-actions"
+vscode "henriiik.vscode-sort"
+vscode "marcostazi.VS-code-drupal"
+vscode "mechatroner.rainbow-csv"
+vscode "mikestead.dotenv"
+vscode "MisterJ.vue-volar-extention-pack"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-edgedevtools.vscode-edge-devtools"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode-remote.remote-wsl"
+vscode "ms-vscode-remote.vscode-remote-extensionpack"
+vscode "ms-vscode.azure-repos"
+vscode "ms-vscode.powershell"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-repositories"
+vscode "ms-vscode.remote-server"
+vscode "Nuxtr.nuxtr-vscode"
+vscode "p1c2u.docker-compose"
+vscode "Postman.postman-for-vscode"
+vscode "redhat.vscode-yaml"
+vscode "sibiraj-s.vscode-scss-formatter"
+vscode "sidthesloth.html5-boilerplate"
+vscode "syler.sass-indented"
+vscode "Tyriar.sort-lines"
+vscode "Vue.volar"
+vscode "Zarifprogrammer.tailwind-snippets"

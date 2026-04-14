@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="nl" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacyverklaring | Erik Leuning</title>
+    <meta name="description" content="Lees hoe Erik Leuning – Begeleiding en Ondersteuning omgaat met persoonsgegevens, bewaartermijnen en beveiliging." />
+    <link rel="canonical" href="https://www.erikleuning.nl/privacyverklaring" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Erik Leuning – Begeleiding en Ondersteuning" />
+    <meta property="og:title" content="Privacyverklaring" />
+    <meta property="og:description" content="Privacyverklaring website Erik Leuning – Begeleiding en Ondersteuning" />
+    <meta property="og:url" content="https://www.erikleuning.nl/privacyverklaring" />
+    <meta property="og:image" content="https://www.erikleuning.nl/images/header-erik-leuning-1024.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacyverklaring" />
+    <meta name="twitter:description" content="Privacyverklaring website Erik Leuning – Begeleiding en Ondersteuning" />
+    <meta name="twitter:image" content="https://www.erikleuning.nl/images/header-erik-leuning-1024.webp" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <script>
+      (() => {
+        const key = 'erikleuning-theme';
+        const stored = window.localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/main-B4fndoTe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-CHu3g1MH.css">
+  </head>
+  <body class="min-h-full bg-slate-50 text-slate-800 transition-colors dark:bg-slate-900 dark:text-slate-100">
+    <header x-data="siteHeader('privacy')" class="site-header">
+  <a href="#inhoud" class="skip-link">Overslaan en naar de inhoud gaan</a>
+  <div class="site-header__container">
+    <a href="./" class="site-brand focus-ring">
+      <picture style="width: 4.25rem; height: 4.25rem; overflow: hidden; border-radius: 999px; border: 1px solid rgba(148, 163, 184, 0.35); display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.9);">
+        <img
+          src="images/logo256x256-256.webp"
+          width="128"
+          height="128"
+          loading="lazy"
+          decoding="async"
+          alt="Home"
+          style="width: 100%; height: 100%; object-fit: contain;" />
+      </picture>
+      <span style="display: flex; flex-direction: column; gap: 0.15rem;">
+        <span class="site-brand__title">Erik Leuning</span>
+        <span class="site-brand__subtitle">Begeleiding en Ondersteuning</span>
+      </span>
+    </a>
+    <nav class="primary-nav" aria-label="Hoofdmenu desktop">
+      <template x-for="item in $store.navigatie.items" :key="item.href">
+        <a
+          :href="item.href"
+          class="primary-nav__link focus-ring"
+          :aria-current="currentFor(item) ? 'page' : undefined"
+          x-text="item.label"
+          @click="navigate($event, item)"></a>
+      </template>
+      <button
+        type="button"
+        class="primary-nav__link focus-ring desktop-theme-toggle"
+        @click="toggleTheme"
+        :aria-pressed="isDark"
+        aria-label="Thema wisselen">
+        <template x-if="!isDark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95 5.636 18.364M18.364 18.364 16.95 16.95M7.05 7.05 5.636 5.636M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </template>
+        <template x-if="isDark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z"/></svg>
+        </template>
+      </button>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <button type="button" class="mobile-toggle focus-ring" @click="toggleTheme" :aria-pressed="isDark" aria-label="Thema wisselen">
+        <template x-if="!isDark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95 5.636 18.364M18.364 18.364 16.95 16.95M7.05 7.05 5.636 5.636M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </template>
+        <template x-if="isDark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z"/></svg>
+        </template>
+      </button>
+      <button type="button" class="mobile-toggle focus-ring" @click="toggleMenu" :aria-expanded="mobileOpen" aria-controls="hoofdmenu" aria-label="Hoofdmenu wisselen">
+        <template x-if="!mobileOpen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </template>
+        <template x-if="mobileOpen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6l-12 12"/></svg>
+        </template>
+      </button>
+    </div>
+  </div>
+  <div x-show="mobileOpen" x-transition.opacity.duration.200ms class="mobile-panel" id="hoofdmenu" role="dialog" @keydown.window.escape.prevent="closeMenu" @click.away="closeMenu" x-ref="mobilePanel" aria-label="Hoofdmenu mobiel">
+    <template x-for="item in $store.navigatie.items" :key="item.href">
+      <a
+        :href="item.href"
+        class="focus-ring"
+        :aria-current="currentFor(item) ? 'page' : undefined"
+        x-text="item.label"
+        @click="navigate($event, item)"></a>
+    </template>
+  </div>
+</header>
+
+    <main id="inhoud" class="page-wrapper privacy-page" style="max-width: 900px;">
+      <section class="privacy-hero">
+        <div class="privacy-hero__media">
+          <picture>
+            <img
+              src="images/privacy-hero-1024.webp"
+              srcset="images/privacy-hero-480.webp 480w, images/privacy-hero-768.webp 768w, images/privacy-hero-1024.webp 1024w, images/privacy-hero-1600.webp 1600w"
+              sizes="(max-width: 960px) 100vw, 480px"
+              width="1600"
+              height="1067"
+              loading="lazy"
+              decoding="async"
+              alt="Laptop en notitieblok op tafel" />
+          </picture>
+        </div>
+        <div class="privacy-hero__content">
+          <span class="privacy-hero__eyebrow">Privacyverklaring</span>
+          <h1>Transparant over persoonsgegevens</h1>
+          <p>Lees hoe Erik Leuning – Begeleiding en Ondersteuning zorgvuldig omgaat met persoonsgegevens, bewaartermijnen en het delen van informatie met derden.</p>
+        </div>
+      </section>
+
+      <article class="prose prose-slate max-w-none dark:prose-invert">
+        <h2>PRIVACYVERKLARING</h2>
+        <p>Persoonsgegevens die Erik Leuning – Begeleiding en Ondersteuning verwerkt<br />
+        Ik verwerk persoonsgegevens over u doordat u gebruik maakt van mijn diensten en/of omdat u deze zelf aan mij verstrekt. Hieronder een overzicht van de persoonsgegevens die ik verwerk:</p>
+        <ul>
+          <li>Voor- en achternaam</li>
+          <li>Geslacht</li>
+          <li>Adresgegevens</li>
+          <li>Geboortedatum</li>
+          <li>Geboorteplaats</li>
+          <li>Telefoonnummer</li>
+          <li>E-mailadres</li>
+          <li>Mogelijke privé-informatie</li>
+        </ul>
+        <p>Bijzondere en/of gevoelige persoonsgegevens die Erik Leuning – Begeleiding en Ondersteuning verwerkt<br />
+        Mijn website en/of dienst heeft niet de intentie gegevens te verzamelen over website bezoekers die jonger zijn dan 16 jaar. Tenzij ze toestemming hebben van ouders of voogd. Ik kan echter niet controleren of een bezoeker ouder dan 16 is. Ik raad ouders dan ook aan betrokken te zijn bij de online activiteiten van hun kinderen, om zo te voorkomen dat er persoonsgegevens over kinderen verzameld worden zonder ouderlijke toestemming. Als u ervan overtuigd bent dat ik zonder die toestemming persoonsgegevens heb verzameld over een minderjarige, neem dan contact met mij op via <span class="email-text" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</span>, dan zal ik deze informatie verwijderen.</p>
+        <p><strong>Waarom Erik Leuning – Begeleiding en Ondersteuning persoonsgegevens nodig heeft</strong><br />
+        Ik verwerk uw persoonsgegevens voor de volgende doelen:</p>
+        <ul>
+          <li>Het afhandelen van uw betaling</li>
+          <li>U te kunnen bellen indien dit nodig is om mijn diensten te kunnen uitvoeren</li>
+          <li>U te informeren over wijzigingen van mijn diensten</li>
+          <li>Ik verwerk ook persoonsgegevens als ik hier wettelijk toe verplicht ben, zoals bijvoorbeeld gegevens die ik nodig heb voor mijn belastingaangifte.</li>
+        </ul>
+        <p><strong>Hoe lang Erik Leuning – Begeleiding en Ondersteuning persoonsgegevens bewaard</strong><br />
+        Ik bewaar uw persoonsgegevens niet langer dan strikt nodig is om de doelen te realiseren waarvoor uw gegevens worden verzameld. Vanaf het einde van de zorg moet ik het dossier (wettelijk) vijftien jaar bewaren.</p>
+        <p><strong>Deelt Erik Leuning – Begeleiding en Ondersteuning uw persoonsgegevens met anderen</strong><br />
+        Ik verstrek uitsluitend aan derden en alleen als dit nodig is voor de uitvoering van mijn overeenkomst met u of om te voldoen aan een wettelijke verplichting.</p>
+        <p><strong>Cookies of vergelijkbare technieken die Erik Leuning – Begeleiding en Ondersteuning gebruikt</strong><br />
+        Ik maak alleen gebruik van technische, functionele en analytische cookies die geen inbreuk maken op uw privacy. Een cookie is een klein tekstbestand dat bij het eerste bezoek aan deze website wordt opgeslagen op uw computer, tablet of smartphone. De cookies die ik gebruik zijn noodzakelijk voor de technische werking van de website en uw gebruiksgemak. Ze zorgen ervoor dat de website naar behoren werkt en onthouden bijvoorbeeld uw voorkeursinstellingen. Ook kan ik hiermee mijn website optimaliseren. U kunt zich afmelden voor cookies door uw internetbrowser zo in te stellen dat deze geen cookies meer opslaat. Daarnaast kunt u ook alle informatie die eerder is opgeslagen via de instellingen van uw browser verwijderen.</p>
+        <p><strong>Persoonsgegevens van Erik Leuning – Begeleiding en Ondersteuning inzien, corrigeren of verwijderen</strong><br />
+        U heeft het recht om uw persoonsgegevens in te zien, te corrigeren of te verwijderen. U kunt een verzoek tot inzage, correctie of verwijdering sturen naar <span class="email-text" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</span>. Om er zeker van te zijn dat het verzoek tot inzage door u is gedaan, vraag ik u een kopie van uw identiteitsbewijs bij het verzoek mee te sturen. Hierbij vraag ik u om in deze kopie uw pasfoto en Burgerservicenummer (BSN) zwart te maken. Dit ter bescherming van uw privacy. Ik zal zo snel mogelijk, maar binnen vier weken, op uw verzoek reageren.</p>
+        <p><strong>Waar Erik Leuning – Begeleiding en Ondersteuning uw persoonsgegevens vastgelegd en hoe ze zijn beveiligd</strong><br />
+        Ik neem de bescherming van uw persoonsgegevens serieus. Uw persoonsgegevens worden vastgelegd op mijn computer. Mijn computer is beveiligd met een wachtwoord. Daarnaast is mijn computer zodanig ingesteld, dat bij inactiviteit het beeldscherm automatisch wordt vergrendeld.</p>
+        <p>Als u de indruk heeft dat uw persoonsgegevens niet goed beveiligd zijn of er aanwijzingen zijn van misbruik, neem dan contact met mij op via <span class="email-text" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</span></p>
+      </article>
+    </main>
+    <footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <picture>
+        <img
+          src="images/logo256x256-256.webp"
+          width="120"
+          height="120"
+          loading="lazy"
+          decoding="async"
+          alt="Erik Leuning logo" />
+      </picture>
+      <div>
+        <p class="site-footer__eyebrow">Erik Leuning</p>
+        <p class="site-footer__lead">VAN KWETSBAARHEID NAAR ZELFREDZAAMHEID/ZELFSTANDIGHEID!</p>
+        <p>Staat voor individuele begeleiding van een specifieke hulpvraag; over het algemeen in de eigen omgeving. Begeleiding vanuit PGB en ZIN en particulier; ook in te huren door instellingen.</p>
+      </div>
+    </div>
+    <div class="site-footer__grid">
+      <div>
+        <h3>Snelle navigatie</h3>
+        <nav aria-label="Footer" class="site-footer__nav">
+          <a href="#home">Home</a>
+          <a href="#over-mij">Over mij</a>
+          <a href="#doelgroep">Doelgroep</a>
+          <a href="#werkwijze">Werkwijze</a>
+          <a href="#visie">Visie</a>
+          <a href="#werkgebied">Werkgebied</a>
+          <a href="#contact">Contact</a>
+          <a href="privacyverklaring.html">Privacy &amp; disclaimer</a>
+        </nav>
+      </div>
+      <div>
+        <h3>Bereikbaarheid</h3>
+        <ul class="site-footer__list">
+          <li><a class="focus-ring email-link" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</a></li>
+          <li><a href="tel:+31630516464" class="focus-ring">06-30516464</a></li>
+          <li><a href="https://www.linkedin.com/in/erik-leuning-376558aa/?originalSubdomain=nl" class="focus-ring">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Werkgebied</h3>
+        <p>Begeleiding binnen een straal van circa 50 km rondom Oldenzaal en de 14 Twentse gemeenten.</p>
+        <a href="https://zorgondernemers-twente.nl" target="_blank" rel="noopener" class="partner-link focus-ring" style="margin-top: 1rem;">
+          <picture>
+            <img
+              src="images/zorgondernemers-twente_logo-425.webp"
+              width="142"
+              height="48"
+              loading="lazy"
+              decoding="async"
+              alt="logo Coöperatie Zorgondernemers Twente" />
+          </picture>
+          <span>Coöperatie Zorgondernemers Twente</span>
+        </a>
+      </div>
+    </div>
+    <section class="site-footer__accessibility" aria-labelledby="footer-accessibility">
+      <h3 id="footer-accessibility">Toegankelijkheid</h3>
+      <p>Ik volg de WCAG&nbsp;2.1 AA-richtlijnen om deze site voor iedereen bruikbaar te maken. Signaleert u toch een toegankelijkheidsprobleem? Mail <a class="focus-ring email-link" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</a> of bel <a href="tel:+31630516464" class="focus-ring">06-30516464</a>.</p>
+    </section>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© 2025 Erik Leuning – Begeleiding en Ondersteuning</p>
+    <div>
+      <a class="focus-ring email-link" data-email-user="erik" data-email-domain="erikleuning" data-email-tld="nl">erik[at]erikleuning.nl</a>
+      <span aria-hidden="true">·</span>
+      <a href="privacyverklaring.html" class="focus-ring">Privacy &amp; disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+<div x-data="cookieBanner()" x-cloak x-show="open" x-transition.opacity.duration.200ms class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie melding" aria-describedby="cookie-banner-description">
+  <div class="cookie-banner__inner">
+    <p id="cookie-banner-description">Deze site gebruikt uitsluitend functionele cookies om de werking van de website te ondersteunen. Er worden geen persoonsgegevens gedeeld met derden.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn" @click="accept">Accepteren</button>
+      <button type="button" class="cookie-decline focus-ring" @click="decline">Weigeren</button>
+    </div>
+  </div>
+</div>
+
+    <script type="application/ld+json">
+      {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Erik Leuning – Begeleiding en Ondersteuning",
+  "url": "https://www.erikleuning.nl/privacyverklaring",
+  "image": "https://www.erikleuning.nl/images/header-erik-leuning-1024.webp",
+  "logo": "https://www.erikleuning.nl/images/logo256x256-256.webp",
+  "email": "erik@erikleuning.nl",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Oldenzaal",
+    "addressRegion": "Overijssel",
+    "addressCountry": "NL"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "addressLocality": "Oldenzaal",
+      "addressRegion": "Overijssel",
+      "addressCountry": "NL"
+    },
+    "geoRadius": 50000
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/erik-leuning-376558aa/?originalSubdomain=nl"
+  ]
+}
+
+    </script>
+    <script type="application/ld+json">
+      {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://www.erikleuning.nl/"
+  },
+  {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Privacyverklaring",
+    "item": "https://www.erikleuning.nl/privacyverklaring"
+  }
+]
+}
+
+    </script>
+  </body>
+</html>

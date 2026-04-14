@@ -1,0 +1,21 @@
+/* Tailwind entrypoint for Studio Stiksel site */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
