@@ -1,4 +1,0 @@
-# robots.txt for Studio Stiksel
-User-agent: *
-Disallow:
-Sitemap: https://studiostiksel.nl/sitemap.xml
